@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1주차 숙제</title>
+</head>
+<body>
+    <style>
+        #list li {
+          /* list-style: none; */
+          width:100px;
+          height:100px;
+          background-color: teal;
+          margin-bottom: 10px;
+        }
+        #list .eevent {
+          background-color: thistle;
+          width:100px;
+          height:100px;
+          /* background-color: teal; */
+          margin-bottom: 10px;
+        }
+      </style>
+
+      <ul id="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <script>
+        let wrap = document.getElementsByTagName("li");
+        for(let i = 0; i < wrap.length; i++){
+          wrap[i].classList.remove("eevent")
+        }
+
+        document.addEventListener("keydown", function(event){
+          for(let i = 0; i < wrap.length; i++){
+          wrap[i].classList.remove("eevent")
+        }
+          const classN = "eevent";
+
+          for (let i = 0; i < Number(event.key); i++){
+            wrap[i].classList.add(classN)
+          }
+
+        })
+
+      </script>
+</body>
+</html>
